@@ -5,7 +5,7 @@ import {dbMiddleware} from "../../p01_database_lib";
 
 import notificationRouter from "./routes/notification.router";
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 const app = express();
 // Middlewares
