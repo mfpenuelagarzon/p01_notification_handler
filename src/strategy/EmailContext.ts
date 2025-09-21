@@ -1,14 +1,13 @@
 import {IStrategy} from "../interfaces/IStrategy.interface";
-import {INotificationConfig} from "../interfaces/INotificationConfig.interface";
+import {MailConfig} from "../config/mailer.config";
 
-class EmailContext {
+export class EmailContext {
     strategy: IStrategy;
     constructor(strategy:IStrategy) {
         this.strategy = strategy;
     }
 
-    public getNotificationConfig(): INotificationConfig {
-        console.log('getting notification config');
-        return this.strategy.getNotificationConfig();
+    public async getNotificationConfig(request_id: number): Promise<MailConfig> {
+        return await this.strategy.getNotificationConfig(request_id);
     }
 }

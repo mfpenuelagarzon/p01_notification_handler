@@ -1,16 +1,16 @@
 import {IStrategy} from "../interfaces/IStrategy.interface";
-import {INotificationConfig} from "../interfaces/INotificationConfig.interface";
+import {MailConfig} from "../config/mailer.config";
 
 export class AddSupportStrategy implements IStrategy {
-    public async getNotificationConfig(): Promise<INotificationConfig> {
-        return new Promise((resolve, reject) => {
+    public getNotificationConfig(request_id: number): Promise<MailConfig> {
+        return new Promise(async (resolve, reject) => {
             try {
-                const notificationConfig: INotificationConfig = {
+                const notificationConfig: MailConfig = {
+                    from: '',
                     to: '',
                     cc: '',
                     subject: '',
-                    data: {},
-                    template: ''
+                    html: ''
                 };
                 console.log('AddSupportStrategy.notificationConfig', notificationConfig);
                 resolve(notificationConfig);

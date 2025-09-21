@@ -1,5 +1,5 @@
-import {INotificationConfig} from "./INotificationConfig.interface";
+import {MailConfig} from "../config/mailer.config";
 
 export interface IStrategy {
-    getNotificationConfig(): Promise<INotificationConfig>;
+    getNotificationConfig(request_id: number): Promise<MailConfig>;
 }

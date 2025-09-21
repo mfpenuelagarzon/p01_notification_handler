@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from "cors";
 import * as bodyParser from "body-parser";
-import {dbMiddleware} from "../../p01_database_lib";
+import {dbMiddleware} from "marketing-request-database-lib";
 
 import notificationRouter from "./routes/notification.router";
 import {mailMiddleware} from "./middlewares/mail.middleware";
@@ -21,7 +21,7 @@ app.use(dbMiddleware({
   dialect: "mysql",
   timezone: "-05:00",
 }));
-//app.use(mailMiddleware());
+app.use(mailMiddleware());
 
 // Paths
 const BASE_PATH = '/api/v1/notification';

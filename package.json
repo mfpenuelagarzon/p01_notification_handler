@@ -18,7 +18,7 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
-    "marketing-request-database-lib": "^1.0.4",
+    "marketing-request-database-lib": "^1.0.5",
     "moment": "^2.30.1",
     "nodemailer": "^7.0.6"
   },
