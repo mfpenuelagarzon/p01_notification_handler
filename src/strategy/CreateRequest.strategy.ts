@@ -36,7 +36,8 @@ export class CreateRequestStrategy implements IStrategy {
                     },
                     include: [
                         {
-                            association: 'RequestAssignments', include: [
+                            association: 'RequestAssignments',
+                            include: [
                                 {association: 'ServicePartner'}
                             ]
                         },
