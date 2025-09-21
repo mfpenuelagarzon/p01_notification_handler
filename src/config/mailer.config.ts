@@ -15,8 +15,8 @@ export const createTransporter = (): Transporter => {
         port: 587, // 465 para SSL
         secure: false, // true si va con 465
         auth: {
-            user: 'mgarzonnaranjo@gmail.com', // process.env.EMAIL
-            pass: 'tblz sypr qllq gjuz', // process.env.PASSWORD
+            user: process.env.EMAIL,
+            pass: process.env.PASSWORD,
         }
     })
     return transporter;
