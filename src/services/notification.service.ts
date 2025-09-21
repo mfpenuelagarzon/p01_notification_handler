@@ -6,7 +6,7 @@ class NotificationService {
         return new Promise(async (resolve, reject) => {
             try {
                 //const result = await transporter.sendMail(mailConfig);
-                const result = "mail sended XD!";
+                const result = "mail sended successfully!";
                 resolve(result);
             } catch (e) {
                 reject(e);
