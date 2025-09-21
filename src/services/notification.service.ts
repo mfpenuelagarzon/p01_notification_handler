@@ -1,9 +1,12 @@
+import {Transporter} from "nodemailer";
+import {MailConfig} from "../config/mailer.config";
 
 class NotificationService {
-    public sendEmail() {
-        return new Promise((resolve, reject) => {
+    public sendEmail(transporter: Transporter, mailConfig: MailConfig) {
+        return new Promise(async (resolve, reject) => {
             try {
-                const result = "email sended succcesfully";
+                //const result = await transporter.sendMail(mailConfig);
+                const result = "mail sended XD!";
                 resolve(result);
             } catch (e) {
                 reject(e);
